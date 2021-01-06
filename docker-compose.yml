@@ -16,9 +16,27 @@ services:
     ports:
       - target: 5432
         published: 5432
+    networks:
+      - postgres-compose-network
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "allan@uol.com.br"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres
+    networks:
+      - postgres-compose-network
 
 # volumes declaration.
 volumes:
   # postgres-data
   postgres-data:
     driver: local
+
+networks: 
+  postgres-compose-network:
+    driver: bridge

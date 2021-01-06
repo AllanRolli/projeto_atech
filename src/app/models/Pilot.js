@@ -18,6 +18,11 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   )
+
+  Pilot.associate = models => {
+    Pilot.belongsTo(models.Fly, { foreignKey: 'fly_id' })    
+  };
+
   Pilot.prototype.checkPassword = function (password) {
     return bcrypt.compare(password, this.password_hash)
   };

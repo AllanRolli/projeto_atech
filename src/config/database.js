@@ -3,7 +3,7 @@ module.exports = {
   host: '127.0.0.1',
   username: 'docker',
   password: 'docker',
-  database: 'nodeapi',
+  database: 'projeto_atech',
   operatorAliases: false,
   define: {
     timestamps: true,

@@ -14,6 +14,17 @@ class App {
   middleware() {
     this.express.use(express.urlencoded({ extended: false }));
     this.express.use(express.json());
+    this.express.use(
+      session({
+        name: 'root',
+        secret: 'MyAppSecret',
+        resave: true,
+        store: new FileStore({
+          path: path.resolve(__dirname, '..', 'tmp', 'sessions')
+        }),
+        saveUninitialized: true
+      })
+    )
   }
   routes() {
     this.express.use(require("./router"));
