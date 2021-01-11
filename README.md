@@ -35,7 +35,7 @@ I create a script in mongo language to make the tables, inside the folder src/co
 
 ### Postgres config
 
-Inside the root of the project exists one docker-compose.yml file, with him you can make the pull of the postgres and the pgadmin to administrate.
+Inside the root of the project exists one docker-compose.yml file, with him you can make the pull of the postgres and the pgadmin to administrate, change the user and password in line 25, 26 to access the pgadmin.
 Remembering that you must have docker installed. From your command line:
 
 
@@ -46,6 +46,8 @@ $ docker-compose up -d
 # This command stops to provide the postgres
 $ docker-compose down
 ```
+After this you can access the database using localhost:16543 in your browser.
+Tip.: to create a server connection you have to use the name of the image (postgres) in the host.
 
 ## Running Docker
 
