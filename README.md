@@ -1,13 +1,8 @@
 # projeto_atech
 
-<img src="https://img.shields.io/github/languages/code-size/AllanRolli/projeto_atech?style=plastic"/> <img src="https://img.shields.io/github/license/AllanRolli/projeto_atech?style=plastic"/>
+<img src="https://img.shields.io/github/languages/code-size/AllanRolli/projeto_atech?style=plastic"/> <img src="https://img.shields.io/github/license/AllanRolli/projeto_atech?style=plastic"/> <img src="https://img.shields.io/github/license/AllanRolli/projeto_atech">
 
 This project has the purpose of making a test.
-
-
-## 👨🏾‍🏫 Documentation
-
-The documentation can be accessed in [![desafiobossa Documentation](https://img.shields.io/badge/desafiobossa-APIBluePrint-blue.svg)](https://desafiobossa.docs.apiary.io/)
 
 ## :rocket: Technologies
 
@@ -43,6 +38,7 @@ I create a script in mongo language to make the tables, inside the folder src/co
 Inside the root of the project exists one docker-compose.yml file, with him you can make the pull of the postgres and the pgadmin to administrate.
 Remembering that you must have docker installed. From your command line:
 
+
 ```bash
 # This command create a persistent volume in machine and the database instead
 $ docker-compose up -d
@@ -51,46 +47,25 @@ $ docker-compose up -d
 $ docker-compose down
 ```
 
-## Deploying
-
-### Deploying in Azure
-
-Click the button below to automatically set up the desafiobossa API in an app
-running on your Heroku account.
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/AllanRolli/desafiobossa)
-
-Once you've deployed, you can easily clone the application and alter the
-configuration to disable features:
-
-```bash
-$ heroku clone -a new-app-name
-$ heroku config:set POLLS_CAN_VOTE_QUESTION=false
-$ heroku config:set POLLS_CAN_CREATE_QUESTION=false
-$ heroku config:set POLLS_CAN_DELETE_QUESTION=false
-```
-
-Remember that have to insert the MONGO_URL in heroku config vars to use your application.
-
-### Deploying on Heroku using Docker
+## Running Docker
 
 <img src="https://www.mundodocker.com.br/wp-content/uploads/2015/06/docker_facebook_share.png" width="100" height="100">
 
-If you'd like to, you may use Docker on Heroku instead. I created a Dockerfile to build an image in the root of the repository.Refer to the [Heroku
-Container Registry and Runtime
-Guide](https://devcenter.heroku.com/articles/container-registry-and-runtime#getting-started)
-for detailed instructions. Providing you have Docker installed you can follow
-the following steps:
+If you'd like to, you may use Docker to test the application. I created a Dockerfile to build an image in the root of the repository.
+You can make image by the following steps:
 
 ```bash
-$ heroku container:login
-$ heroku container:push web --app=name_of_your_app
-$ heroku container:release web --app=name_of_your_app
+# Building the application
+$ docker build -t <name_of_your_image> .
+
+# After the build
+$ docker run -p 3000:3000 -d <name_of_your_image>
 ```
+To check if is running open your browser in localhost:3000
 
 ## :memo: License
 
-This project is under the MIT license. See the [LICENSE](https://github.com/AllanRolli/desafiobossa/blob/master/LICENSE) for more information.
+This project is under the MIT license. See the [LICENSE](https://github.com/AllanRolli/projeto_atech/blob/master/LICENSE) for more information.
 
 ---
 
