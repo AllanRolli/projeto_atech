@@ -65,6 +65,12 @@ $ docker run -p 3000:3000 -d <name_of_your_image>
 ```
 To check if is running open your browser in localhost:3000
 
+## Diagram
+
+![](src/docs/Diagram.jpg)
+
+From this image we have how to make this application via Serverless using the Azure Cloud.
+
 ## :memo: License
 
 This project is under the MIT license. See the [LICENSE](https://github.com/AllanRolli/projeto_atech/blob/master/LICENSE) for more information.
