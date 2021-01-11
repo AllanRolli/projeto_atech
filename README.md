@@ -10,7 +10,7 @@ This project has the purpose of making a test.
 - [Postgres](https://www.postgresql.org/)
 - [Python](https://www.python.org/)
 
-<img src="https://www.opus-software.com.br/wp-content/uploads/2018/09/nodejs.jpg">
+<img src="https://www.opus-software.com.br/wp-content/uploads/2018/09/nodejs.jpg" width="100" height="100">
 
 ## :information_source: How To Use
 
